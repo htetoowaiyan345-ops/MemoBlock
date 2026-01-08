@@ -1,0 +1,16 @@
+{
+  "name": "backend",
+  "module": "index.ts",
+  "dependencies": {
+    "colyseus": "^0.16.5",
+    "express": "^5.2.1"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
+  },
+  "private": true,
+  "type": "module",
+  "devDependencies": {
+    "@types/express": "^5.0.6"
+  }
+}
