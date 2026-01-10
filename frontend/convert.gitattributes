@@ -1,0 +1,12 @@
+# JS/TS files always use LF
+*.js text eol=lf
+*.ts text eol=lf
+*.tsx text eol=lf
+*.css text eol=lf
+*.html text eol=lf
+
+# Optional: normalize all text files automatically
+* text=auto
+
+# Ignore node_modules from line-ending normalization
+node_modules/* -text
