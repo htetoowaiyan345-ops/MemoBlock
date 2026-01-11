@@ -1,5 +1,5 @@
+import { Link } from "@tanstack/react-router";
 import { X } from "lucide-react";
-import { useNavigate } from "react-router-dom";
 
 interface GameHeaderProps {
   phase: "remember" | "guess";
@@ -7,18 +7,16 @@ interface GameHeaderProps {
 }
 
 const GameHeader = ({ phase, currentNumber }: GameHeaderProps) => {
-  const navigate = useNavigate();
-
   return (
     <div className="relative flex w-full items-center justify-center py-4">
       {/* Close button */}
-      <button
-        onClick={() => navigate("/")}
+      <Link
+        href="/"
         className="absolute left-4 top-4 flex h-10 w-10 items-center justify-center rounded-lg border-2 border-doodle-line bg-card transition-all hover:bg-secondary active:translate-y-0.5"
         style={{ borderRadius: "8px 4px 10px 6px" }}
       >
         <X className="h-5 w-5" />
-      </button>
+      </Link>
 
       {/* Phase title */}
       <div className="text-center">

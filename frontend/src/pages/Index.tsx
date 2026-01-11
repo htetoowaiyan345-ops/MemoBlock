@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+import { useRouter } from "@tanstack/react-router";
 import DoodleButton from "@/components/DoodleButton";
 import DoodleInput from "@/components/DoodleInput";
 // import DoodleDecorations from "@/components/DoodleDecorations";
@@ -8,15 +8,15 @@ import DoodleDecorations from "@/components/DoodleDecoration";
 
 const Index = () => {
   const [gameCode, setGameCode] = useState("");
-  const navigate = useNavigate();
+  const { history } = useRouter();
 
   const handleCreateGame = () => {
-    navigate("/game");
+    history.push("/game");
   };
 
   const handleJoinGame = () => {
     if (gameCode.trim()) {
-      navigate("/game");
+      history.push("/game");
     }
   };
 

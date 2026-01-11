@@ -1,7 +1,7 @@
 import { InputHTMLAttributes, forwardRef } from "react";
 import { cn } from "@/lib/utils";
 
-interface DoodleInputProps extends InputHTMLAttributes<HTMLInputElement> {}
+type DoodleInputProps = InputHTMLAttributes<HTMLInputElement>
 
 const DoodleInput = forwardRef<HTMLInputElement, DoodleInputProps>(
   ({ className, ...props }, ref) => {
