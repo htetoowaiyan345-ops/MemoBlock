@@ -4,7 +4,7 @@ FROM node:24-alpine AS builder
 WORKDIR /app
 
 # Copy dependency definitions first to leverage Docker cache
-COPY package.json
+COPY package.json .
 
 RUN npm i
 
